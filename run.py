@@ -1,5 +1,6 @@
 import random
 
+
 def random_maths_quiz():
     def addition():
         score = 0
@@ -21,7 +22,6 @@ def random_maths_quiz():
             else:
                 print("Something went wrong")
                 print("---------------------")
-
 
         print(f"You got {score} out of 5")
         print("--------------------------")
@@ -50,8 +50,6 @@ def random_maths_quiz():
 
         print(f"You got {score} out of 5")
         print("--------------------------")
-        playAgain()
-
 
     def addition_and_subtraction():
         score = 0
@@ -80,13 +78,44 @@ def random_maths_quiz():
         print(f"You got {score} out of 5")
         print("--------------------------")
 
+    print("Welcome to Maths Questions")
+    choice_input = input(
+        "Please choose" +
+        "\n1 = Addition" +
+        "\n2 = Subtraction" +
+        "\n3 = Addition and Subtraction \n")
+    choice_input = int(choice_input)
+
+    if choice_input == 1:
+        addition()
+    elif choice_input == 2:
+        subtraction()
+    elif choice_input == 3:
+        addition_and_subtraction()
+    else:
+        random_maths_quiz()
+
+
 def higher_lower():
+    print("to be added")
 
 
 def play_again():
+    play_again_input = input(
+        "Would you like to play another game?\nY/N\n").lower()
+    if play_again_input == "y":
+        main()
+
+    elif play_again_input == "n":
+        print("Thanks for Playing")
+
+    else:
+        print("Please choose Y or N")
+        play_again()
 
 
 def main():
+    random_maths_quiz()
 
 
-main():
+main()
