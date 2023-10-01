@@ -1,4 +1,7 @@
 import random
+import os
+import sys
+from time import sleep
 
 
 def random_maths_quiz():
