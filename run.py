@@ -97,7 +97,32 @@ def random_maths_quiz():
 
 
 def higher_lower():
-    print("to be added")
+    print("Welcome to Higher or Lower")
+    tries = 0
+    num = random.randint(1, 50)
+    while True:
+        num_input = input(f'Choose a number between 1 - 50\n')
+        num_input = int(num_input)
+        if num_input == num:
+            print("Correct")
+            print("---------------------")
+            tries += 1
+            break
+        elif num_input > num:
+            print("Too High")
+            print("---------------------")
+            tries += 1
+        elif num_input < num:
+            print("Too Low")
+            print("---------------------")
+            tries += 1
+        else:
+            print("Something went wrong pick again")
+            print("---------------------")
+
+    print(f'It took you {tries} tries to get the number')
+    print("--------------------------")
+    play_again()
 
 
 def play_again():
@@ -115,7 +140,7 @@ def play_again():
 
 
 def main():
-    random_maths_quiz()
+    higher_lower()
 
 
 main()
