@@ -2,6 +2,10 @@ import random
 
 
 def random_maths_quiz():
+    """
+    Maths questions.
+    Addition, Subtraction and Both.
+    """
     def addition():
         score = 0
         print("Addition Maths")
@@ -97,6 +101,9 @@ def random_maths_quiz():
 
 
 def higher_lower():
+    """
+    Higher and Lower Game.
+    """
     print("Welcome to Higher or Lower")
     tries = 0
     num = random.randint(1, 50)
@@ -126,6 +133,9 @@ def higher_lower():
 
 
 def play_again():
+    """
+    Play Again Function.
+    """
     play_again_input = input(
         "Would you like to play another game?\nY/N\n").lower()
     if play_again_input == "y":
@@ -140,7 +150,20 @@ def play_again():
 
 
 def main():
-    higher_lower()
+    """
+    Main Function
+    """
+    print("Please pick a game")
+    choice_input = input(
+        "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n")
+    choice_input = int(choice_input)
+    if choice_input == 1:
+        random_maths_quiz()
+    elif choice_input == 2:
+        higher_lower()
+    else:
+        print("Something went wrong")
+        main()
 
 
 main()
