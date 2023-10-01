@@ -2,6 +2,12 @@ import random
 import os
 import sys
 from time import sleep
+"""
+random to randomise the numbers in the quiz and higher/lower game
+os to clear the terminal of text
+sys for system exit
+sleep to give a slight pause in between code
+"""
 
 
 def random_maths_quiz():
@@ -32,6 +38,7 @@ def random_maths_quiz():
 
         print(f"You got {score} out of 5")
         print("--------------------------")
+        play_again()
 
     def subtraction():
         score = 0
@@ -57,6 +64,7 @@ def random_maths_quiz():
 
         print(f"You got {score} out of 5")
         print("--------------------------")
+        play_again()
 
     def addition_and_subtraction():
         score = 0
@@ -84,6 +92,7 @@ def random_maths_quiz():
 
         print(f"You got {score} out of 5")
         print("--------------------------")
+        play_again()
 
     print("Welcome to Maths Questions")
     choice_input = input(
@@ -94,12 +103,16 @@ def random_maths_quiz():
     choice_input = int(choice_input)
 
     if choice_input == 1:
+        os.system('clear')
         addition()
     elif choice_input == 2:
+        os.system('clear')
         subtraction()
     elif choice_input == 3:
+        os.system('clear')
         addition_and_subtraction()
     else:
+        os.system('clear')
         random_maths_quiz()
 
 
@@ -142,10 +155,15 @@ def play_again():
     play_again_input = input(
         "Would you like to play another game?\nY/N\n").lower()
     if play_again_input == "y":
+        sleep(1)
+        os.system('clear')
         main()
 
     elif play_again_input == "n":
         print("Thanks for Playing")
+        sleep(2)
+        os.system('clear')
+        sys.exit(0)
 
     else:
         print("Please choose Y or N")
@@ -156,16 +174,24 @@ def main():
     """
     Main Function
     """
+    os.system('clear')
+
     print("Please pick a game")
     choice_input = input(
-        "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n")
+        "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n3 = Exit Terminal \n")
     choice_input = int(choice_input)
     if choice_input == 1:
+        os.system('clear')
         random_maths_quiz()
     elif choice_input == 2:
+        os.system('clear')
         higher_lower()
+    elif choice_input == 3:
+        os.system('clear')
+        sys.exit(0)
     else:
         print("Something went wrong")
+        sleep(1.5)
         main()
 
 
