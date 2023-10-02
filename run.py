@@ -12,9 +12,13 @@ sleep to give a slight pause in between code
 
 def random_maths_quiz():
     """
-    Maths questions.
-    Addition, Subtraction and Both.
+    Maths questions for Addition, Subtraction and addition/subtraction.
+    Runs a for loop through 5 questions.
+    User will try get a score at the end.
+    if the user inputs a wrong character the question will be marked wrong.
+    User is asked if they want to play another game.
     """
+
     def addition():
         score = 0
         print("Addition Maths")
@@ -38,7 +42,7 @@ def random_maths_quiz():
             except ValueError:
                 i += 1
                 print("WRONG")
-                print("Please pick a number")   
+                print("Please pick a number")
                 print("---------------------")
 
         print(f"You got {score} out of 5")
@@ -70,7 +74,7 @@ def random_maths_quiz():
             except ValueError:
                 i += 1
                 print("WRONG")
-                print("Please pick a number")   
+                print("Please pick a number")
                 print("---------------------")
 
         print(f"You got {score} out of 5")
@@ -104,7 +108,7 @@ def random_maths_quiz():
             except ValueError:
                 i += 1
                 print("WRONG")
-                print("Please pick a number")   
+                print("Please pick a number")
                 print("---------------------")
 
         print(f"You got {score} out of 5")
@@ -117,26 +121,39 @@ def random_maths_quiz():
         "\n1 = Addition" +
         "\n2 = Subtraction" +
         "\n3 = Addition and Subtraction \n")
-    choice_input = int(choice_input)
 
-    if choice_input == 1:
-        os.system('clear')
-        addition()
-    elif choice_input == 2:
-        os.system('clear')
-        subtraction()
-    elif choice_input == 3:
-        os.system('clear')
-        addition_and_subtraction()
-    else:
+    try:
+        choice_input = int(choice_input)
+
+        if choice_input == 1:
+            os.system('clear')
+            addition()
+        elif choice_input == 2:
+            os.system('clear')
+            subtraction()
+        elif choice_input == 3:
+            os.system('clear')
+            addition_and_subtraction()
+        else:
+            os.system('clear')
+            random_maths_quiz()
+
+    except ValueError:
+        print("Please pick a number")
+        sleep(2)
         os.system('clear')
         random_maths_quiz()
 
 
 def higher_lower():
     """
-    Higher and Lower Game.
+    Higher or Lower.
+    The game begins by generating a random number between 1 and 50.
+    The player's objective is to guess this randomly generated number.
+    The game provides feedback on the guessed number.
+    Higher, lower and the correct number.
     """
+
     print("Welcome to Higher or Lower")
     tries = 0
     num = random.randint(1, 50)
@@ -170,8 +187,13 @@ def higher_lower():
 
 def play_again():
     """
-    Play Again Function.
+    Play Again.
+    After completing a quiz or game the user is asked
+    do they want to play again.
+    If yes the user is brought back to the main function to pick what to play.
+    If no the terminal is closed.
     """
+
     play_again_input = input(
         "Would you like to play another game?\nY/N\n").lower()
     if play_again_input == "y":
@@ -193,13 +215,17 @@ def play_again():
 def main():
     """
     Main Function
+    This is the starting point for the execution of the program.
+    Here the users have the choice to pick what they want to play.
     """
+    
     while True:
         try:
             os.system('clear')
             print("Please pick a game")
             choice_input = input(
-                "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n3 = Exit Terminal \n")
+                "Please choose \n1 = Simple Maths \n2 = Higher or Lower ",
+                "\n3 = Exit Terminal \n")
             choice_input = int(choice_input)
             if choice_input == 1:
                 os.system('clear')
