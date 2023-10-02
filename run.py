@@ -2,12 +2,27 @@ import random
 import os
 import sys
 from time import sleep
+import gspread
+from google.oauth2.service_account import Credentials
 """
 random to randomise the numbers in the quiz and higher/lower game
 os to clear the terminal of text
 sys for system exit
 sleep to give a slight pause in between code
+gspread is a library designed for working with Google Spreadsheets
+credentials is used to access the resources offered by Google APIs.
 """
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('number_facts')
 
 
 def random_maths_quiz():
@@ -185,6 +200,16 @@ def higher_lower():
     play_again()
 
 
+def number_facts():
+    """
+    Number Facts
+    """
+    facts = SHEET.worksheet('facts')
+    data = facts.get_all_values()
+    print(data)
+    play_again()
+
+
 def play_again():
     """
     Play Again.
@@ -218,14 +243,13 @@ def main():
     This is the starting point for the execution of the program.
     Here the users have the choice to pick what they want to play.
     """
-    
+
     while True:
         try:
             os.system('clear')
             print("Please pick a game")
             choice_input = input(
-                "Please choose \n1 = Simple Maths \n2 = Higher or Lower ",
-                "\n3 = Exit Terminal \n")
+                "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n3 = Facts about Numbers \n4 = Exit Terminal \n")
             choice_input = int(choice_input)
             if choice_input == 1:
                 os.system('clear')
@@ -234,6 +258,9 @@ def main():
                 os.system('clear')
                 higher_lower()
             elif choice_input == 3:
+                os.system('clear')
+                number_facts()
+            elif choice_input == 4:
                 os.system('clear')
                 sys.exit(0)
             else:
