@@ -23,17 +23,22 @@ def random_maths_quiz():
             num2 = random.randint(1, 5)
             result = num1 + num2
             guess_input = input(f"What is {num1} + {num2} = ")
-            guess_input = int(guess_input)
-
-            if guess_input == result:
-                print("CORRECT")
-                print("---------------------")
-                score += 1
-            elif guess_input != result:
+            try:
+                guess_input = int(guess_input)
+                if guess_input == result:
+                    print("CORRECT")
+                    print("---------------------")
+                    score += 1
+                elif guess_input != result:
+                    print("WRONG")
+                    print("---------------------")
+                else:
+                    print("Something went wrong")
+                    print("---------------------")
+            except ValueError:
+                i += 1
                 print("WRONG")
-                print("---------------------")
-            else:
-                print("Something went wrong")
+                print("Please pick a number")   
                 print("---------------------")
 
         print(f"You got {score} out of 5")
@@ -49,17 +54,23 @@ def random_maths_quiz():
             result = num1 - num2
 
             guess_input = input(f"What is {num1} - {num2} = ")
-            guess_input = int(guess_input)
+            try:
+                guess_input = int(guess_input)
 
-            if guess_input == result:
-                print("CORRECT")
-                print("---------------------")
-                score += 1
-            elif guess_input != result:
+                if guess_input == result:
+                    print("CORRECT")
+                    print("---------------------")
+                    score += 1
+                elif guess_input != result:
+                    print("WRONG")
+                    print("---------------------")
+                else:
+                    print("Something went wrong")
+                    print("---------------------")
+            except ValueError:
+                i += 1
                 print("WRONG")
-                print("---------------------")
-            else:
-                print("Something went wrong")
+                print("Please pick a number")   
                 print("---------------------")
 
         print(f"You got {score} out of 5")
@@ -77,17 +88,23 @@ def random_maths_quiz():
             result = num1 + num2 - num3
 
             guess_input = input(f"What is {num1} + {num2} - {num3} = ")
-            guess_input = int(guess_input)
+            try:
+                guess_input = int(guess_input)
 
-            if guess_input == result:
-                print("CORRECT")
-                print("---------------------")
-                score += 1
-            elif guess_input != result:
+                if guess_input == result:
+                    print("CORRECT")
+                    print("---------------------")
+                    score += 1
+                elif guess_input != result:
+                    print("WRONG")
+                    print("---------------------")
+                else:
+                    print("Something went wrong")
+                    print("---------------------")
+            except ValueError:
+                i += 1
                 print("WRONG")
-                print("---------------------")
-            else:
-                print("Something went wrong")
+                print("Please pick a number")   
                 print("---------------------")
 
         print(f"You got {score} out of 5")
@@ -124,24 +141,27 @@ def higher_lower():
     tries = 0
     num = random.randint(1, 50)
     while True:
-        num_input = input(f'Choose a number between 1 - 50\n')
-        num_input = int(num_input)
-        if num_input == num:
-            print("Correct")
-            print("---------------------")
-            tries += 1
-            break
-        elif num_input > num:
-            print("Too High")
-            print("---------------------")
-            tries += 1
-        elif num_input < num:
-            print("Too Low")
-            print("---------------------")
-            tries += 1
-        else:
-            print("Something went wrong pick again")
-            print("---------------------")
+        try:
+            num_input = input(f'Choose a number between 1 - 50\n')
+            num_input = int(num_input)
+            if num_input == num:
+                print("Correct")
+                print("---------------------")
+                tries += 1
+                break
+            elif num_input > num:
+                print("Too High")
+                print("---------------------")
+                tries += 1
+            elif num_input < num:
+                print("Too Low")
+                print("---------------------")
+                tries += 1
+            else:
+                print("Something went wrong pick again")
+                print("---------------------")
+        except ValueError:
+            print("Please pick a number")
 
     print(f'It took you {tries} tries to get the number')
     print("--------------------------")
@@ -174,25 +194,30 @@ def main():
     """
     Main Function
     """
-    os.system('clear')
+    while True:
+        try:
+            os.system('clear')
+            print("Please pick a game")
+            choice_input = input(
+                "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n3 = Exit Terminal \n")
+            choice_input = int(choice_input)
+            if choice_input == 1:
+                os.system('clear')
+                random_maths_quiz()
+            elif choice_input == 2:
+                os.system('clear')
+                higher_lower()
+            elif choice_input == 3:
+                os.system('clear')
+                sys.exit(0)
+            else:
+                print("Something went wrong")
+                sleep(1.5)
+                main()
 
-    print("Please pick a game")
-    choice_input = input(
-        "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n3 = Exit Terminal \n")
-    choice_input = int(choice_input)
-    if choice_input == 1:
-        os.system('clear')
-        random_maths_quiz()
-    elif choice_input == 2:
-        os.system('clear')
-        higher_lower()
-    elif choice_input == 3:
-        os.system('clear')
-        sys.exit(0)
-    else:
-        print("Something went wrong")
-        sleep(1.5)
-        main()
+        except ValueError:
+            print("Please pick a number")
+            sleep(2)
 
 
 main()
