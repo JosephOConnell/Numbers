@@ -2,6 +2,7 @@ import random
 import os
 import sys
 from time import sleep
+from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
 """
@@ -203,11 +204,29 @@ def higher_lower():
 def number_facts():
     """
     Number Facts
+    Gets the facts worksheet from google sheets.
+    Once the values are got it randomly picks one fact from the list
     """
     facts = SHEET.worksheet('facts')
-    data = facts.get_all_values()
-    print(data)
-    play_again()
+    facts = facts.get_all_values()
+    facts_row = random.choice(facts)
+    print(", ".join(facts_row))
+    print("---------------------")
+
+    num_facts_input = input(
+        "Would you like to another fact?\nY/N\n").lower()
+    if num_facts_input == "y":
+        print("---------------------")
+        number_facts()
+
+    elif num_facts_input == "n":
+        os.system('clear')
+        sys.exit(0)
+
+    else:
+        sleep(1)
+        os.system('clear')
+        main()
 
 
 def play_again():
