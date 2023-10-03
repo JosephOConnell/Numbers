@@ -2,7 +2,6 @@ import random
 import os
 import sys
 from time import sleep
-from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
 """
@@ -42,7 +41,7 @@ def random_maths_quiz():
             num1 = random.randint(1, 5)
             num2 = random.randint(1, 5)
             result = num1 + num2
-            guess_input = input(f"What is {num1} + {num2} = ")
+            guess_input = input(f"What is {num1} + {num2} =\n")
             try:
                 guess_input = int(guess_input)
                 if guess_input == result:
@@ -73,7 +72,7 @@ def random_maths_quiz():
             num2 = random.randint(1, 5)
             result = num1 - num2
 
-            guess_input = input(f"What is {num1} - {num2} = ")
+            guess_input = input(f"What is {num1} - {num2} =\n")
             try:
                 guess_input = int(guess_input)
 
@@ -107,7 +106,7 @@ def random_maths_quiz():
             num3 = random.randint(1, 5)
             result = num1 + num2 - num3
 
-            guess_input = input(f"What is {num1} + {num2} - {num3} = ")
+            guess_input = input(f"What is {num1} + {num2} - {num3} =\n")
             try:
                 guess_input = int(guess_input)
 
@@ -136,7 +135,7 @@ def random_maths_quiz():
         "Please choose" +
         "\n1 = Addition" +
         "\n2 = Subtraction" +
-        "\n3 = Addition and Subtraction \n")
+        "\n3 = Addition and Subtraction\n")
 
     try:
         choice_input = int(choice_input)
@@ -266,9 +265,9 @@ def main():
     while True:
         try:
             os.system('clear')
-            print("Please pick a game")
             choice_input = input(
-                "Please choose \n1 = Simple Maths \n2 = Higher or Lower \n3 = Facts about Numbers \n4 = Exit Terminal \n")
+                "Please choose \n- 1 = Simple Maths \n- 2 = Higher or Lower"
+                "\n- 3 = Facts about Numbers \n- 4 = Exit Terminal\n")
             choice_input = int(choice_input)
             if choice_input == 1:
                 os.system('clear')
