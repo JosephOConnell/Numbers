@@ -1,32 +1,71 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# NUMBERS
 
-Welcome,
+HEADING--
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![Am I Responsive]()
 
-## Reminders
+## About Numbers
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+![PageSpeed Insights Lighthouse Results]()
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Lighthouse Results]()
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- **random_maths_quiz**
+  - 
+  
+  ![Random Math Quiz]()
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- **higher_lower**
+  - 
 
-Connect your GitHub repository and deploy as normal.
+![Higher Lower]()
 
-## Constraints
+- **number_facts**
+  - 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![Number Facts]()
 
----
+### Testing
 
-Happy coding!
+| **TEST**                            | **ACTION**                                       | **EXPECTATION**                                              | **RESULT**        |
+| ----------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ----------------- |
+| | | | |
+| | | | |
+| | | | |
+
+
+- Tested the responsiveness of my site on [Am I Responsive?]()
+
+### Validator Testing
+
+- index HTML
+  0 errors returned when passing through the official [W3C]()
+  ![HTML Vidator]()
+
+- style CSS
+  0 errors was found when passing through the official [Jigsaw]()
+  ![CSS Validator]()
+
+- script Javascript
+  0 errors was found when passing through the official [JSHint]()
+  ![Javascript Validator]()
+
+### Unfixed Bugs
+
+- As of now I have no bugs.
+
+### Deployment
+
+- 
+
+The live link can be found here - [Number](https://numbers-game-8b4eba16a846.herokuapp.com/)
+
+### Content and Media Credits
+
+- **CREDITS**
+  - [Code Institute](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/tree/master)
+  - [Stack Overflow](https://stackoverflow.co/)
+  - 
