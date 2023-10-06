@@ -4,6 +4,8 @@ import sys
 from time import sleep
 import gspread
 from google.oauth2.service_account import Credentials
+import pyfiglet
+
 """
 random to randomise the numbers in the quiz and higher/lower game
 os to clear the terminal of text
@@ -11,6 +13,7 @@ sys for system exit
 sleep to give a slight pause in between code
 gspread is a library designed for working with Google Spreadsheets
 credentials is used to access the resources offered by Google APIs.
+pyfiglet is ASCII text and renders it in ASCII art fonts.
 """
 
 SCOPE = [
@@ -206,6 +209,7 @@ def number_facts():
     Gets the facts worksheet from google sheets.
     Once the values are got it randomly picks one fact from the list
     """
+
     facts = SHEET.worksheet('facts')
     facts = facts.get_all_values()
     facts_row = random.choice(facts)
@@ -219,8 +223,7 @@ def number_facts():
         number_facts()
 
     elif num_facts_input == "n":
-        os.system('clear')
-        sys.exit(0)
+        main()
 
     else:
         sleep(1)
@@ -245,14 +248,20 @@ def play_again():
         main()
 
     elif play_again_input == "n":
-        print("Thanks for Playing")
-        sleep(2)
-        os.system('clear')
-        sys.exit(0)
+        exit_terminal()
 
     else:
         print("Please choose Y or N")
         play_again()
+
+
+def exit_terminal():
+    os.system('clear')
+    thanks_message = pyfiglet.figlet_format
+    print(thanks_message("Thanks for Playing", font="big", justify="center"))
+    sleep(5)
+    os.system('clear')
+    sys.exit(0)
 
 
 def main():
@@ -265,9 +274,12 @@ def main():
     while True:
         try:
             os.system('clear')
+            header = pyfiglet.figlet_format
+            print(header("NUMBERS\n", font="banner", justify="center"))
+
             choice_input = input(
-                "Please choose \n- 1 = Simple Maths \n- 2 = Higher or Lower"
-                "\n- 3 = Facts about Numbers \n- 4 = Exit Terminal\n")
+                "Please choose \n1 = Simple Maths \n2 = Higher or Lower"
+                "\n3 = Facts about Numbers \n4 = Exit Terminal\n")
             choice_input = int(choice_input)
             if choice_input == 1:
                 os.system('clear')
@@ -279,8 +291,7 @@ def main():
                 os.system('clear')
                 number_facts()
             elif choice_input == 4:
-                os.system('clear')
-                sys.exit(0)
+                exit_terminal()
             else:
                 print("Something went wrong")
                 sleep(1.5)
