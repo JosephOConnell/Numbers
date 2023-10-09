@@ -99,17 +99,49 @@ def random_maths_quiz():
         print("--------------------------")
         play_again()
 
-    def addition_and_subtraction():
+    def multiplication():
         score = 0
-        print("Addition and Subtraction Maths")
+        print("Multiplication Maths")
 
         for i in range(5):
             num1 = random.randint(1, 5)
             num2 = random.randint(1, 5)
-            num3 = random.randint(1, 5)
-            result = num1 + num2 - num3
+            result = num1 * num2
 
-            guess_input = input(f"What is {num1} + {num2} - {num3} =\n")
+            guess_input = input(f"What is {num1} * {num2} =\n")
+            try:
+                guess_input = int(guess_input)
+
+                if guess_input == result:
+                    print("CORRECT")
+                    print("---------------------")
+                    score += 1
+                elif guess_input != result:
+                    print("WRONG")
+                    print("---------------------")
+                else:
+                    print("Something went wrong")
+                    print("---------------------")
+            except ValueError:
+                i += 1
+                print("WRONG")
+                print("Please pick a number")
+                print("---------------------")
+
+        print(f"You got {score} out of 5")
+        print("--------------------------")
+        play_again()
+
+    def division():
+        score = 0
+        print("Division Maths")
+
+        for i in range(5):
+            num1 = random.randint(1, 10)
+            num2 = random.randint(1, 5)
+            result = num1 // num2
+
+            guess_input = input(f"What is {num1} / {num2} =\n")
             try:
                 guess_input = int(guess_input)
 
@@ -138,7 +170,8 @@ def random_maths_quiz():
         "Please choose" +
         "\n1 = Addition" +
         "\n2 = Subtraction" +
-        "\n3 = Addition and Subtraction\n")
+        "\n3 = Multiplcation" +
+        "\n4 = Division \n")
 
     try:
         choice_input = int(choice_input)
@@ -151,7 +184,10 @@ def random_maths_quiz():
             subtraction()
         elif choice_input == 3:
             os.system('clear')
-            addition_and_subtraction()
+            multiplication()
+        elif choice_input == 4:
+            os.system('clear')
+            division()
         else:
             os.system('clear')
             random_maths_quiz()
@@ -270,10 +306,10 @@ def main():
     This is the starting point for the execution of the program.
     Here the users have the choice to pick what they want to play.
     """
+    os.system('clear')
 
     while True:
         try:
-            os.system('clear')
             header = pyfiglet.figlet_format
             print(header("NUMBERS\n", font="banner", justify="center"))
 
