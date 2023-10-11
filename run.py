@@ -287,7 +287,7 @@ def main():
     This is the starting point for the execution of the program.
     Here the users have the choice to pick what they want to play.
     """
-    os.system('clear')
+    os.system('reset')
 
     while True:
         try:
