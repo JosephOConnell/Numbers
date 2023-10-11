@@ -78,7 +78,6 @@ def random_maths_quiz():
             guess_input = input(f"What is {num1} - {num2} =\n")
             try:
                 guess_input = int(guess_input)
-
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
@@ -94,7 +93,6 @@ def random_maths_quiz():
                 print("WRONG")
                 print("Please pick a number")
                 print("---------------------")
-
         print(f"You got {score} out of 5")
         print("--------------------------")
         play_again()
@@ -102,16 +100,13 @@ def random_maths_quiz():
     def multiplication():
         score = 0
         print("Multiplication Maths")
-
         for i in range(5):
             num1 = random.randint(1, 5)
             num2 = random.randint(1, 5)
             result = num1 * num2
-
             guess_input = input(f"What is {num1} * {num2} =\n")
             try:
                 guess_input = int(guess_input)
-
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
@@ -127,7 +122,6 @@ def random_maths_quiz():
                 print("WRONG")
                 print("Please pick a number")
                 print("---------------------")
-
         print(f"You got {score} out of 5")
         print("--------------------------")
         play_again()
@@ -135,16 +129,13 @@ def random_maths_quiz():
     def division():
         score = 0
         print("Division Maths")
-
         for i in range(5):
             num1 = random.randint(1, 10)
             num2 = random.randint(1, 5)
             result = num1 // num2
-
             guess_input = input(f"What is {num1} / {num2} =\n")
             try:
                 guess_input = int(guess_input)
-
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
@@ -160,7 +151,6 @@ def random_maths_quiz():
                 print("WRONG")
                 print("Please pick a number")
                 print("---------------------")
-
         print(f"You got {score} out of 5")
         print("--------------------------")
         play_again()
@@ -170,12 +160,10 @@ def random_maths_quiz():
         "Please choose" +
         "\n1 = Addition" +
         "\n2 = Subtraction" +
-        "\n3 = Multiplcation" +
+        "\n3 = Multiplication" +
         "\n4 = Division \n")
-
     try:
         choice_input = int(choice_input)
-
         if choice_input == 1:
             os.system('clear')
             addition()
@@ -191,7 +179,6 @@ def random_maths_quiz():
         else:
             os.system('clear')
             random_maths_quiz()
-
     except ValueError:
         print("Please pick a number")
         sleep(2)
@@ -233,7 +220,6 @@ def higher_lower():
                 print("---------------------")
         except ValueError:
             print("Please pick a number")
-
     print(f'It took you {tries} tries to get the number')
     print("--------------------------")
     play_again()
@@ -257,10 +243,8 @@ def number_facts():
     if num_facts_input == "y":
         print("---------------------")
         number_facts()
-
     elif num_facts_input == "n":
         main()
-
     else:
         sleep(1)
         os.system('clear')
@@ -282,10 +266,9 @@ def play_again():
         sleep(1)
         os.system('clear')
         main()
-
     elif play_again_input == "n":
+        os.system('clear')
         exit_terminal()
-
     else:
         print("Please choose Y or N")
         play_again()
@@ -295,8 +278,6 @@ def exit_terminal():
     os.system('clear')
     thanks_message = pyfiglet.figlet_format
     print(thanks_message("Thanks for Playing", font="big", justify="center"))
-    sleep(5)
-    os.system('clear')
     sys.exit(0)
 
 
@@ -312,7 +293,6 @@ def main():
         try:
             header = pyfiglet.figlet_format
             print(header("NUMBERS\n", font="banner", justify="center"))
-
             choice_input = input(
                 "Please choose \n1 = Simple Maths \n2 = Higher or Lower"
                 "\n3 = Facts about Numbers \n4 = Exit Terminal\n")
@@ -332,7 +312,6 @@ def main():
                 print("Something went wrong")
                 sleep(1.5)
                 main()
-
         except ValueError:
             print("Please pick a number")
             sleep(2)
