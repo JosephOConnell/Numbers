@@ -41,14 +41,24 @@ Then to finish it off I have some fun random facts about numbers.
 
 | **TEST**                            | **ACTION**                                       | **EXPECTATION**                                              | **RESULT**        |
 | ----------------------------------- | ------------------------------------------------ | ------------------------------------------------------------ | ----------------- |
-| | | | |
-| | | | |
-| | | | |
+| main() | Choose each of the 4 options | Brings me to the selected function | Pass |
+| exit_terminal() | When pickedn | Should call the thank you message and exit out of the terminal | Pass |
+| play_again() | When picked | Brings you back to the main menu | Pass |
+| number_facts() | When picked | Will bring up number facts and ask do you want another | Pass |
+| Google Sheets | Call the info of google sheet | Number facts show on the terminal | Pass |
+| higher_lower() | When picked | Brings you to the higher lower game | Pass |
+| random_maths_quiz() | Choose each of the 4 options | Brings me to the selected function | Pass |
+| addition() | When picked | 5 Addition maths questions | Pass |
+| subtraction() | When picked | 5 Subtraction maths questions | Pass |
+| multiplication() | When picked | 5 multiplication maths questions | Pass |
+| division() | When picked | 5 division maths questions | Pass |
+| try/except | Press wrong number, symbol or letter | Brings user back to the choices | Pass |
+
 
 **CI Python Linter**
 - I checked my code on the Code Institiute Python Linter and had no errors returned.
 - [CI Python Linter](https://pep8ci.herokuapp.com/)
-- ![Linter](https://github.com/JosephOConnell/Numbers/blob/main/images/linter.png)
+![Linter](https://github.com/JosephOConnell/Numbers/blob/main/images/linter.png)
 
 ### Unfixed Bugs
 - As of now I have one bug.
@@ -88,13 +98,13 @@ Then to finish it off I have some fun random facts about numbers.
     - When the project is set up go to API's and Services
     - We need to go to API Library. Find google drive and enable it.
     - Next find click on the Create Credentials.
-    - ![Credentials](https://github.com/JosephOConnell/Numbers/blob/main/images/creds.png)
-    - ![cred type](https://github.com/JosephOConnell/Numbers/blob/main/images/creds-type.png)
-    - ![Service Account](https://github.com/JosephOConnell/Numbers/blob/main/images/service_name.png)
-    - ![Account Details](https://github.com/JosephOConnell/Numbers/blob/main/images/access.png)
-    - ![Manage](https://github.com/JosephOConnell/Numbers/blob/main/images/manage.png)
-    - ![Keys](https://github.com/JosephOConnell/Numbers/blob/main/images/keys.png)
-    - ![JSON File](https://github.com/JosephOConnell/Numbers/blob/main/images/json.png)
+    ![Credentials](https://github.com/JosephOConnell/Numbers/blob/main/images/creds.png)
+    ![cred type](https://github.com/JosephOConnell/Numbers/blob/main/images/creds-type.png)
+    ![Service Account](https://github.com/JosephOConnell/Numbers/blob/main/images/service_name.png)
+    ![Account Details](https://github.com/JosephOConnell/Numbers/blob/main/images/access.png)
+    ![Manage](https://github.com/JosephOConnell/Numbers/blob/main/images/manage.png)
+    ![Keys](https://github.com/JosephOConnell/Numbers/blob/main/images/keys.png)
+    ![JSON File](https://github.com/JosephOConnell/Numbers/blob/main/images/json.png)
     - Next we have to go back to API Library, find Google Sheets and enable it.
 
 The live link can be found here - [Numbers](https://numbers-game-8b4eba16a846.herokuapp.com/)

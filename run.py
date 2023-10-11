@@ -65,6 +65,7 @@ def random_maths_quiz():
 
         print(f"You got {score} out of 5")
         print("--------------------------")
+        os.system('clear')
         play_again()
 
     def subtraction():
@@ -95,6 +96,7 @@ def random_maths_quiz():
                 print("---------------------")
         print(f"You got {score} out of 5")
         print("--------------------------")
+        os.system('clear')
         play_again()
 
     def multiplication():
@@ -124,6 +126,7 @@ def random_maths_quiz():
                 print("---------------------")
         print(f"You got {score} out of 5")
         print("--------------------------")
+        os.system('clear')
         play_again()
 
     def division():
@@ -153,6 +156,7 @@ def random_maths_quiz():
                 print("---------------------")
         print(f"You got {score} out of 5")
         print("--------------------------")
+        os.system('clear')
         play_again()
 
     print("Welcome to Maths Questions")
@@ -275,9 +279,10 @@ def play_again():
 
 
 def exit_terminal():
+    thanks = pyfiglet.figlet_format
+    print(thanks("Thanks \nFor \nPlaying", font="big", justify="center"))
+    sleep(5)
     os.system('clear')
-    thanks_message = pyfiglet.figlet_format
-    print(thanks_message("Thanks for Playing", font="big", justify="center"))
     sys.exit(0)
 
 
@@ -287,7 +292,7 @@ def main():
     This is the starting point for the execution of the program.
     Here the users have the choice to pick what they want to play.
     """
-    os.system('reset')
+    os.system('clear')
 
     while True:
         try:
