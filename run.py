@@ -45,18 +45,22 @@ def random_maths_quiz():
             num2 = random.randint(1, 5)
             result = num1 + num2
             guess_input = input(f"What is {num1} + {num2} =\n")
+
             try:
                 guess_input = int(guess_input)
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
                     score += 1
+
                 elif guess_input != result:
                     print("WRONG")
                     print("---------------------")
+
                 else:
                     print("Something went wrong")
                     print("---------------------")
+
             except ValueError:
                 i += 1
                 print("WRONG")
@@ -65,7 +69,6 @@ def random_maths_quiz():
 
         print(f"You got {score} out of 5")
         print("--------------------------")
-        os.system('clear')
         play_again()
 
     def subtraction():
@@ -75,28 +78,31 @@ def random_maths_quiz():
             num1 = random.randint(5, 10)
             num2 = random.randint(1, 5)
             result = num1 - num2
-
             guess_input = input(f"What is {num1} - {num2} =\n")
+
             try:
                 guess_input = int(guess_input)
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
+
                     score += 1
                 elif guess_input != result:
                     print("WRONG")
                     print("---------------------")
+
                 else:
                     print("Something went wrong")
                     print("---------------------")
+
             except ValueError:
                 i += 1
                 print("WRONG")
                 print("Please pick a number")
                 print("---------------------")
+
         print(f"You got {score} out of 5")
         print("--------------------------")
-        os.system('clear')
         play_again()
 
     def multiplication():
@@ -107,26 +113,30 @@ def random_maths_quiz():
             num2 = random.randint(1, 5)
             result = num1 * num2
             guess_input = input(f"What is {num1} * {num2} =\n")
+
             try:
                 guess_input = int(guess_input)
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
                     score += 1
+
                 elif guess_input != result:
                     print("WRONG")
                     print("---------------------")
+
                 else:
                     print("Something went wrong")
                     print("---------------------")
+
             except ValueError:
                 i += 1
                 print("WRONG")
                 print("Please pick a number")
                 print("---------------------")
+
         print(f"You got {score} out of 5")
         print("--------------------------")
-        os.system('clear')
         play_again()
 
     def division():
@@ -137,26 +147,30 @@ def random_maths_quiz():
             num2 = random.randint(1, 5)
             result = num1 // num2
             guess_input = input(f"What is {num1} / {num2} =\n")
+
             try:
                 guess_input = int(guess_input)
                 if guess_input == result:
                     print("CORRECT")
                     print("---------------------")
                     score += 1
+
                 elif guess_input != result:
                     print("WRONG")
                     print("---------------------")
+
                 else:
                     print("Something went wrong")
                     print("---------------------")
+
             except ValueError:
                 i += 1
                 print("WRONG")
                 print("Please pick a number")
                 print("---------------------")
+
         print(f"You got {score} out of 5")
         print("--------------------------")
-        os.system('clear')
         play_again()
 
     print("Welcome to Maths Questions")
@@ -166,27 +180,31 @@ def random_maths_quiz():
         "\n2 = Subtraction" +
         "\n3 = Multiplication" +
         "\n4 = Division \n")
+
     try:
         choice_input = int(choice_input)
         if choice_input == 1:
             os.system('clear')
             addition()
+
         elif choice_input == 2:
             os.system('clear')
             subtraction()
+
         elif choice_input == 3:
             os.system('clear')
             multiplication()
+
         elif choice_input == 4:
             os.system('clear')
             division()
+
         else:
             os.system('clear')
             random_maths_quiz()
     except ValueError:
         print("Please pick a number")
         sleep(2)
-        os.system('clear')
         random_maths_quiz()
 
 
@@ -206,24 +224,30 @@ def higher_lower():
         try:
             num_input = input(f'Choose a number between 1 - 50\n')
             num_input = int(num_input)
+
             if num_input == num:
                 print("Correct")
                 print("---------------------")
                 tries += 1
                 break
+
             elif num_input > num:
                 print("Too High")
                 print("---------------------")
                 tries += 1
+
             elif num_input < num:
                 print("Too Low")
                 print("---------------------")
                 tries += 1
+
             else:
                 print("Something went wrong pick again")
                 print("---------------------")
+
         except ValueError:
             print("Please pick a number")
+
     print(f'It took you {tries} tries to get the number')
     print("--------------------------")
     play_again()
@@ -241,14 +265,16 @@ def number_facts():
     facts_row = random.choice(facts)
     print(", ".join(facts_row))
     print("---------------------")
-
     num_facts_input = input(
         "Would you like to another fact?\nY/N\n").lower()
+
     if num_facts_input == "y":
         print("---------------------")
         number_facts()
+
     elif num_facts_input == "n":
         main()
+
     else:
         sleep(1)
         os.system('clear')
@@ -270,9 +296,11 @@ def play_again():
         sleep(1)
         os.system('clear')
         main()
+
     elif play_again_input == "n":
         os.system('clear')
         exit_terminal()
+
     else:
         print("Please choose Y or N")
         play_again()
@@ -282,7 +310,6 @@ def exit_terminal():
     thanks = pyfiglet.figlet_format
     print(thanks("Thanks \nFor \nPlaying", font="big", justify="center"))
     sleep(5)
-    os.system('clear')
     sys.exit(0)
 
 
@@ -305,18 +332,23 @@ def main():
             if choice_input == 1:
                 os.system('clear')
                 random_maths_quiz()
+
             elif choice_input == 2:
                 os.system('clear')
                 higher_lower()
+
             elif choice_input == 3:
                 os.system('clear')
                 number_facts()
+
             elif choice_input == 4:
                 exit_terminal()
+
             else:
                 print("Something went wrong")
                 sleep(1.5)
                 main()
+
         except ValueError:
             print("Please pick a number")
             sleep(2)

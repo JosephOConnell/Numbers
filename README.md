@@ -17,7 +17,6 @@ Then to finish it off I have some fun random facts about numbers.
    - Multiplication : This operation is also used for totals and sums but when there is more than one of the same number. For example if you are buying five packs of apples that cost £1.20 each, you would do 5 * €1.20.
   
   ![Random Math Quiz](https://github.com/JosephOConnell/Numbers/blob/main/images/maths.png)
-
   ![Addition](https://github.com/JosephOConnell/Numbers/blob/main/images/addition.png)
   ![Subtraction](https://github.com/JosephOConnell/Numbers/blob/main/images/subtraction.png)
   ![Multiplication](https://github.com/JosephOConnell/Numbers/blob/main/images/multiply.png)
@@ -36,6 +35,14 @@ Then to finish it off I have some fun random facts about numbers.
   - The Google Sheets API allows us to pull the values from the sheet and post it to the terminal.
 
   ![Number Facts](https://github.com/JosephOConnell/Numbers/blob/main/images/facts.png)
+
+- **Flowcharts**
+    - Simple Maths Flowchart
+    ![Simple Maths Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/simplemaths_flowchart.png)
+    - Higher or Lower Flowchart
+    ![Higher / Lower Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/higherlower_flowchart.png)
+    - Number Facts
+    ![Number Facts Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/numberfacts_flowchart.png)
 
 ### Testing
 
