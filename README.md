@@ -41,7 +41,7 @@ Then to finish it off I have some fun random facts about numbers.
     ![Simple Maths Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/simplemaths_flowchart.png)
     - Higher or Lower Flowchart
     ![Higher / Lower Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/higherlower_flowchart.png)
-    - Number Facts
+    - Number Facts Flowchart
     ![Number Facts Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/numberfacts_flowchart.png)
 
 ### Testing
