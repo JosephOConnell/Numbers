@@ -3,10 +3,12 @@
 ![Numbers](https://github.com/JosephOConnell/Numbers/blob/main/images/numbers.png)
 
 ## About Numbers
-Numbers is all about numbers and maths. 
-I have a random maths game that focuses on basic math question in four topics. 
-Next is a higher or lower game that helps users use logic to guess the correct number.
-Then to finish it off I have some fun random facts about numbers.
+Numbers is a great way to help get kids into maths and using some basic logic.
+This game is built for children who are at the age of learning basic math.
+It has a maths game that gives 5 questions with random numbers that focuses on basic math questions in four topics "Addition, Subtraction, Multiplicat and Division". 
+It also has a higher or lower game that helps users use logic to guess the correct number but also brings a bit of fun when comparing scores with parents.
+Then to finish it off I have some fun 17 facts about numbers just for a bit of ectra knowledge.
+
 ![Thanks You](https://github.com/JosephOConnell/Numbers/blob/main/images/thanks.png)
 
 - **random_maths_quiz**
