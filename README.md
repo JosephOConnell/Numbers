@@ -7,22 +7,20 @@ Numbers is a great way to help get kids into maths and using some basic logic.
 This game is built for children who are at the age of learning basic math.
 It has a maths game that gives 5 questions with random numbers that focuses on basic math questions in four topics "Addition, Subtraction, Multiplicat and Division". 
 It also has a higher or lower game that helps users use logic to guess the correct number but also brings a bit of fun when comparing scores with parents.
-Then to finish it off I have some fun 17 facts about numbers just for a bit of ectra knowledge.
+Then to finish it off I have some fun 17 facts about numbers just for a bit of extra knowledge.
 
 ![Thanks You](https://github.com/JosephOConnell/Numbers/blob/main/images/thanks.png)
 
 - **random_maths_quiz**
-  - The random math quiz consists of four topics:
+  - The random math quiz consists of three topics:
    - Addition: This operation is used when you want to find the total, or sum, of two or more amounts.
    - Subtraction: This operation is used when you want to find the difference between two amounts or how much of something you have left after a quantity is used. For example, if you want to find the change owed after spending an amount of money.
-   - Division: Division is used when sharing or grouping items. For example, if you want to know how many doughnuts you can buy with €6 if one doughnut costs €1.50, you would do €6 ÷ €1.50.
    - Multiplication : This operation is also used for totals and sums but when there is more than one of the same number. For example if you are buying five packs of apples that cost £1.20 each, you would do 5 * €1.20.
   
   ![Random Math Quiz](https://github.com/JosephOConnell/Numbers/blob/main/images/maths.png)
   ![Addition](https://github.com/JosephOConnell/Numbers/blob/main/images/addition.png)
   ![Subtraction](https://github.com/JosephOConnell/Numbers/blob/main/images/subtraction.png)
   ![Multiplication](https://github.com/JosephOConnell/Numbers/blob/main/images/multiply.png)
-  ![Division](https://github.com/JosephOConnell/Numbers/blob/main/images/division.png)
 
 - **higher_lower** 
   - The Higher-Lower game is a simple guessing game where the player tries to guess a randomly chosen number within a specified range.
@@ -43,7 +41,7 @@ Then to finish it off I have some fun 17 facts about numbers just for a bit of e
     ![Simple Maths Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/simplemaths_flowchart.png)
     - Higher or Lower Flowchart
     ![Higher / Lower Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/higherlower_flowchart.png)
-    - Number Facts Flowchart
+    - Facts About Numbers Flowchart
     ![Number Facts Flowchart](https://github.com/JosephOConnell/Numbers/blob/main/images/numberfacts_flowchart.png)
 
 ### Testing
