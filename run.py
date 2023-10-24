@@ -77,15 +77,17 @@ def random_maths_quiz():
             d = 5
 
         elif choice_input == 4:
+            os.system('clear')
             exit_terminal()
 
         else:
+            os.system('clear')
             random_maths_quiz()
 
     except ValueError:
-        print("Please pick a number")
         random_maths_quiz()
 
+    os.system('clear')
     score = 0
     for i in range(5):
         num1 = random.randint(a, b)
@@ -118,6 +120,8 @@ def random_maths_quiz():
 
     print(f"You got {score} out of 5")
     print("--------------------------")
+    sleep(3)
+    os.system('clear')
     play_again()
 
 
@@ -163,6 +167,8 @@ def higher_lower():
 
     print(f'It took you {tries} tries to get the number')
     print("--------------------------")
+    sleep(5)
+    os.system('clear')
     play_again()
 
 
@@ -183,10 +189,11 @@ def number_facts():
             num_facts_input = input(
                 "Would you like to another fact?\nY/N\n").lower()
             if num_facts_input == "y":
-                print("---------------------")
+                os.system('clear')
                 number_facts()
 
             elif num_facts_input == "n":
+                os.system('clear')
                 main()
 
         except ValueError:
@@ -222,6 +229,7 @@ def exit_terminal():
     thanks = pyfiglet.figlet_format
     print(thanks("Thanks \nFor \nPlaying", font="big", justify="center"))
     sleep(5)
+    os.system('clear')
     sys.exit(0)
 
 
@@ -232,7 +240,6 @@ def main():
     Here the users have the choice to pick what they want to play.
     """
     os.system('clear')
-
     while True:
         try:
             header = pyfiglet.figlet_format
@@ -254,11 +261,13 @@ def main():
                 number_facts()
 
             elif choice_input == 4:
+                os.system('clear')
                 exit_terminal()
 
             else:
                 print("Something went wrong")
                 sleep(1.5)
+                os.system('clear')
                 main()
 
         except ValueError:
